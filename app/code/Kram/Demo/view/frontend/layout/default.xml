@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="sidebar.additional">
+            <block template="content.phtml" class="Kram\Demo\Block\Main" after="-" name="demo_block_main"/>
+        </referenceContainer>
+    </body>
+</page>

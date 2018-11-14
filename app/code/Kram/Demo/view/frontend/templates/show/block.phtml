@@ -1,0 +1,9 @@
+<<?= $block->getWrapper() ?>>
+<h1>This is my <?= $block->getTitle() ?>,
+there are many like it, but this one is mine.</h1>
+</<?= $block->getWrapper() ?>>
+
+<ul>
+<?php for ($i = 0; $i < $block->getColumns(); $i++) :?>
+    <li><?= $i ?></li>
+<?php endfor; ?>

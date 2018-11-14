@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-right" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="demo_block_main" remove="true" />
+    <referenceContainer name="content">
+        <block template="show\block.phtml" class="Kram\Demo\Block\Show" name="demo_block_show">
+            <arguments>
+                <argument name="wrapper" xsi:type="string">div</argument>
+                <argument name="columns" xsi:type="number">2</argument>
+            </arguments>
+            <action method="setTitleByXml">
+                <argument name="title" xsi:type="string">Hello Worldsss</argument>
+            </action>
+        </block>  
+    </referenceContainer>
+</page>
