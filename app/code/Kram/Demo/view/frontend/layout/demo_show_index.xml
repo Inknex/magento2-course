@@ -5,7 +5,6 @@
         <block template="show\block.phtml" class="Kram\Demo\Block\Show" name="demo_block_show">
             <arguments>
                 <argument name="wrapper" xsi:type="string">div</argument>
-                <argument name="columns" xsi:type="number">2</argument>
             </arguments>
             <action method="setTitleByXml">
                 <argument name="title" xsi:type="string">Hello Worldsss</argument>
