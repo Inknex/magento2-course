@@ -4,5 +4,9 @@
         <route id="handler" frontName="handler">
             <module name="Kram_Handler"/>
         </route>
+
+        <route id="demo" frontName="demo">
+            <module name="Kram_Handler" before="Kram_Demo"/>
+        </route>
     </router>
 </config>
