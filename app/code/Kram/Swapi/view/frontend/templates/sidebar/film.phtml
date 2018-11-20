@@ -1,0 +1,14 @@
+<div class="block block-compare">
+    <div class="block-title">
+        <strong>StarWars Films</strong>
+    </div>
+    <div class="block-content">
+        <ul>
+            <?php foreach($block->getFilms() as $film): ?>
+                <li>
+                    <a href="<?= $block->getUrl('swapi/film/view', ['episode' => $film->episode_id]) ?>"><?= $film->title ?></a>
+                </li>
+            <?php endforeach; ?> 
+        </ul>
+    </div>
+</div>
