@@ -32,8 +32,8 @@ class demo extends Command
         /**
          * Create object of class 'Kram\Swapi\Helper\Data' by objectManager
          */
-        $swapi = $this->objectManager->create('Kram\Swapi\Helper\Data');
-        $episode = $swapi->getFilm(4);
+        $swapi = $this->objectManager->create('Kram\Swapi\Helper\DataInterface');
+        $episode = $swapi->getEntity(4);
         $output->writeln("Episode title:{$episode->title}");
 
 

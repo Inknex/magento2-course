@@ -15,4 +15,5 @@
     <type name="Kram\Handler\Helper\Single">
         <plugin name="kram_handler_kram_handler_helper_single" type="Kram\Handler\Plugin\Helper\Single"/>
     </type>
+    <preference for="Kram\Swapi\Helper\DataInterface" type="Kram\Swapi\Helper\Data" />
 </config>
