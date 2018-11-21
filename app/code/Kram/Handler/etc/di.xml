@@ -16,4 +16,15 @@
         <plugin name="kram_handler_kram_handler_helper_single" type="Kram\Handler\Plugin\Helper\Single"/>
     </type>
     <preference for="Kram\Swapi\Helper\DataInterface" type="Kram\Swapi\Helper\Data" />
+    <virtualType name="Kram\Swapi\Data\Films" type="Kram\Swapi\Helper\Data">
+        <arguments>
+            <argument name="entity" xsi:type="string">films</argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Kram\Swapi\Data\Starships" type="Kram\Swapi\Helper\Data">
+        <arguments>
+            <argument name="entity" xsi:type="string">starships</argument>
+        </arguments>
+    </virtualType>    
 </config>

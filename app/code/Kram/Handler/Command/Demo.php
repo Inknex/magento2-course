@@ -36,6 +36,16 @@ class demo extends Command
         $episode = $swapi->getEntity(4);
         $output->writeln("Episode title:{$episode->title}");
 
+        /**
+         * Using VirtualType instead of real class
+         */
+        $swapi = $this->objectManager->create('Kram\Swapi\Data\Films');
+        $episode = $swapi->getEntity(5);
+        $output->writeln("Episode title:{$episode->title}");
+        
+        $swapi = $this->objectManager->create('Kram\Swapi\Data\Starships');
+        $starship = $swapi->getEntity(9);
+        $output->writeln("Starship name:{$starship->name}");
 
         /**
          * Method Get returns Singleton
