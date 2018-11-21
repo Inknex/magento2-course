@@ -35,5 +35,16 @@ class demo extends Command
         $swapi = $this->objectManager->create('Kram\Swapi\Helper\Data');
         $episode = $swapi->getFilm(4);
         $output->writeln("Episode title:{$episode->title}");
+
+
+        /**
+         * Method Get returns Singleton
+        */
+        $object1 = $this->objectManager->get('Kram\Swapi\Helper\Single');
+        $output->writeln("Initial @obj1->var:{$object1->getVar()}");
+        $object1->setVar(9);
+
+        $object2 = $this->objectManager->get('Kram\Swapi\Helper\Single');
+        $output->writeln("Initial @obj2->var:{$object2->getVar()}");
     }
 } 
