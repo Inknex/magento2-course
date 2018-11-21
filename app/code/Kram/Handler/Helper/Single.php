@@ -10,7 +10,7 @@ class Single
         $inputVar = 5
     )
     {
-        $this->var = $inputVar;
+        $this->setVar($inputVar);
     }
 
     public function setVar($var)

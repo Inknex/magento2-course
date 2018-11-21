@@ -41,10 +41,10 @@ class demo extends Command
          * Method Get returns Singleton
         */
         $object1 = $this->objectManager->get('Kram\Handler\Helper\Single');
-        $output->writeln("Initial @obj1->var:{$object1->getVar()}");
-        $object1->setVar(9);
+        $output->writeln("Initial @obj1->var: {$object1->getVar()}");
+        $object1->setVar(8);
 
         $object2 = $this->objectManager->get('Kram\Handler\Helper\Single');
-        $output->writeln("Initial @obj2->var:{$object2->getVar()}");
+        $output->writeln("Initial @obj2->var: {$object2->getVar()}");
     }
 } 
