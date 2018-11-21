@@ -7,6 +7,19 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class demo extends Command
 {
+    protected $objectManager;
+
+    /**
+     * @param \Magento\Framework\ObjectManagerInterface $manager
+     */
+    public function __construct(
+        \Magento\Framework\ObjectManagerInterface $manager
+    )
+    {
+        $this->objectManager = $manager;
+        parent::__construct();
+    }
+
     protected function configure()
     {
         $this->setName("demo");
@@ -16,6 +29,11 @@ class demo extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln("Hello World");
+        /**
+         * Create object of class 'Kram\Swapi\Helper\Data' by objectManager
+         */
+        $swapi = $this->objectManager->create('Kram\Swapi\Helper\Data');
+        $episode = $swapi->getFilm(4);
+        $output->writeln("Episode title:{$episode->title}");
     }
 } 
