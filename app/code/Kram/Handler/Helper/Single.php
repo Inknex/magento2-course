@@ -1,10 +1,17 @@
 <?php
 
-namespace Kram\Swapi\Helper;
+namespace Kram\Handler\Helper;
 
 class Single
 {
-    protected $var = 5;
+    protected $var;
+
+    public function __construct(
+        $inputVar = 5
+    )
+    {
+        $this->var = $inputVar;
+    }
 
     public function setVar($var)
     {

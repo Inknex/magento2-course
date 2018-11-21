@@ -7,4 +7,10 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="Kram\Handler\Helper\Single">
+        <arguments>
+            <argument name="inputVar" xsi:type="number">99</argument>
+        </arguments>
+    </type>    
 </config>
