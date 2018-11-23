@@ -5,7 +5,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class demo extends Command
+class Demo extends Command
 {
     protected $objectManager;
 
@@ -51,7 +51,7 @@ class demo extends Command
          * Method Get returns Singleton
         */
         $object1 = $this->objectManager->get('Kram\Handler\Helper\Single');
-        $output->writeln("Initial @obj1->var: {$object1->getVar()}");
+        $output->writeln("Initial @obj1->var: {$object1->взятьПеременную()}");
         $object1->setVar(8);
 
         $object2 = $this->objectManager->get('Kram\Handler\Helper\Single');

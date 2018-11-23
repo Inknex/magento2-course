@@ -4,6 +4,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="kram_handler_command_demo" xsi:type="object">Kram\Handler\Command\Demo</item>
+                <item name="kram_handler_command_dbase" xsi:type="object">Kram\Handler\Command\Dbase</item>
             </argument>
         </arguments>
     </type>
