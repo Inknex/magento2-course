@@ -1,5 +1,5 @@
 <?php
-namespace Kram\Handler\Orserver;
+namespace Kram\Handler\Observer;
 class Dbase implements \Magento\Framework\Event\ObserverInterface
 {
     public function execute(\Magento\Framework\Event\Observer $observer)
