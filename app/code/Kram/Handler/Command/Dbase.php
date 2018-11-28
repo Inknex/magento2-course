@@ -9,14 +9,18 @@ class Dbase extends Command
 {
     protected $objectManager;
 
+    protected $eventManager;
+
     /**
-     * @param \Magento\Framework\ObjectManagerInterface $manager
+     * @param \Magento\Framework\ObjectManagerInterface $objectManager
      */
     public function __construct(
-        \Magento\Framework\ObjectManagerInterface $manager
+        \Magento\Framework\ObjectManagerInterface $objectManager,
+        \Magento\Framework\Event\ManagerInterface $eventManager
     )
     {
-        $this->objectManager = $manager;
+        $this->objectManager = $objectManager;
+        $this->eventManager = $eventManager;
         parent::__construct();
     }
 
@@ -37,5 +41,13 @@ class Dbase extends Command
         foreach ($films as $film) {
             $output->writeln("Film from db: ".$film->getTitle());
         }
+
+        $product = $this->objectManager->create('Magento\Framework\DataObject', ['text' => 'initial']);
+        
+        /** only object can be passed from event to observer */
+        $this->eventManager->dispatch('dbase_command_dispatch', ['product' => $product]); 
+        
+        $output->writeln("After event: ". $product->getText());
+
     }
 } 
