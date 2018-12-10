@@ -1,0 +1,50 @@
+<!-- File: app/code/Pulsestorm/MenuTutorial/etc/adminhtml/menu.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Kram_Swapi::swapi"
+             title="Swapi"
+             module="Kram_Swapi"
+             sortOrder="15"
+             resource="Kram_Swapi::swapi"/>
+            <add id="Kram_Swapi::entity"
+                title="Entities"
+                module="Kram_Swapi"
+                sortOrder="10"
+                resource="Kram_Swapi::entity"
+                parent="Kram_Swapi::swapi"/>    
+                <add id="Kram_Swapi::film"
+                    title="Films"
+                    module="Kram_Swapi"
+                    sortOrder="10"
+                    resource="Kram_Swapi::film"
+                    parent="Kram_Swapi::entity"
+                    action="swapi/film/index"/>     
+                <add id="Kram_Swapi::planet"
+                    title="Planets"
+                    module="Kram_Swapi"
+                    sortOrder="20"
+                    resource="Kram_Swapi::planet"
+                    parent="Kram_Swapi::entity"
+                    action="swapi/planet/index"/>   
+            <add id="Kram_Swapi::people"
+                title="People"
+                module="Kram_Swapi"
+                sortOrder="20"
+                resource="Kram_Swapi::people"
+                parent="Kram_Swapi::swapi"/>
+                <add id="Kram_Swapi::director"
+                    title="Directors"
+                    module="Kram_Swapi"
+                    sortOrder="10"
+                    resource="Kram_Swapi::director"
+                    parent="Kram_Swapi::people"
+                    action="swapi/director/index"/>
+                <add id="Kram_Swapi::actor"
+                    title="Actors"
+                    module="Kram_Swapi"
+                    sortOrder="20"
+                    resource="Kram_Swapi::actor"
+                    parent="Kram_Swapi::people"
+                    action="swapi/actor/index"/>
+    </menu>
+</config>

@@ -20,7 +20,7 @@ class Film extends \Magento\Framework\View\Element\Template
     
     public function getFilms()
     {
-        return $this->helper->getFilms();
+        return $this->helper->getCollection();
     }
 
 }

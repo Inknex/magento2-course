@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Kram_Swapi::swapi" title="Swapi">
+                    <resource id="Kram_Swapi::entity" title="Entity">
+                        <resource id="Kram_Swapi::film" title="Films"/>
+                        <resource id="Kram_Swapi::planet" title="Planets"/>
+                    </resource>
+                    <resource id="Kram_Swapi::people" title="People">
+                        <resource id="Kram_Swapi::director" title="Directors"/>
+                        <resource id="Kram_Swapi::actor" title="Actors"/>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

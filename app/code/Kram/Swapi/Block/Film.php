@@ -22,7 +22,7 @@ class Film extends \Magento\Framework\View\Element\Template
     {
         if ($episode = $this->getRequest()->getParam('episode')) 
         {
-            return $this->helper->getFilm($episode);
+            return $this->helper->getEntity($episode);
         }
         return false;
     }
